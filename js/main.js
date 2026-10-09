@@ -1,1 +1,1 @@
-/* Estilos de la web */
+// Código de la web
