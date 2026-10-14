@@ -61,7 +61,7 @@ personas.addEventListener("change", function () {
 
 actualizarPrecio(ruta.value);
 
-//                  scrip para el apartado de materiales
+//                  script para el apartado de materiales
 //============================================================================
 
 let lista = document.getElementById("list");
@@ -124,6 +124,3 @@ function contar() {
 }
 
 lista.addEventListener("change", dificultad);
-resultado.addEventListener("click", contar);
-
-
