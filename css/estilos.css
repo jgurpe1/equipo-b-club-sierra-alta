@@ -5,20 +5,21 @@
     border-radius: 12px; 
 }
  
-h2 {
-    font-size: 18px;
+.caja h2 {
+    font-size: 16px;
     font-weight: lighter;
-    letter-spacing: 1px;
-    font-weight: bold;
     padding-right: 1px;
     margin-top: 10px;
+    color: black;
 }
 
 /*Uso grip para poner las sendas  en */
-.todo {
+.caja.todo {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 320px));;
+    justify-content: start;
+    gap: 15px;
+    margin-top: 20px;
 }
 .pares {
     display: contents;
@@ -26,44 +27,51 @@ h2 {
 }
 
 /* uso de flex para poner h2 y select en linea*/
-.rutas {
+.caja .rutas {
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 10px;
     align-items: left;
-    gap: 15px;
+    gap:5px;
 }
 #level {
     width: 100px;
     height: 40px;
-    padding-left: 5px;
-    font-weight: bold;
+    padding-left: 10px;
     font-size: 18px;
     border: 2px solid black;
     border-radius: 5px;
 }
-.favoritos {
+.caja .favoritos {
     text-align: left;
-    margin-bottom: 10px;
+    color: black;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 } 
+
 
 /* relativo a div sendas */
 .senda {
     display: inline-block;
+    background-color: white;
     border: 0.5px solid rgb(204, 218, 209);
     border-radius: 10px;
     margin-right: 10px;
     width: 300px;
+    height: 110px;
     padding-left: 10px;
     padding-top: 15px;
     padding-bottom: 15px;
-
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
+
 .verde {
     border-left: 8px solid forestgreen;
+   
 }
 .rojo {
-    border-left: 8px solid red;
+    border-left: 8px solid rgb(176, 23, 23);
 }
 .amarilla {
     border-left: 8px solid goldenrod;
@@ -74,7 +82,8 @@ h4 {
     font-size: 22px;
     margin: 0px;
     margin-bottom: 5px;
-    font-family:  Helvetica, sans-serif
+    font-family:  Helvetica, sans-serif;
+    color: black;
 }
 
 .corazon {
@@ -83,10 +92,10 @@ h4 {
     width: 30px;
     height: 30px;
     text-align: center;
-    margin-top: 10px;
     border-radius: 5px;
     color: red;
     font-size: 22px;
+  
 }
 
 :root {
@@ -184,9 +193,12 @@ label {
 
 p {
     color: var(--verde-oscuro);
+    margin: 0;
+    margin-bottom: 5px;
 }
 
 select, input {
     padding: 0.5em 1em;
+
     font-size: 1em;
 }
