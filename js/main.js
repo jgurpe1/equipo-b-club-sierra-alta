@@ -1,9 +1,14 @@
 let btnModo = document.getElementById ("btnModo")
 let funcionTema = true
+
 let styles = getComputedStyle(document.documentElement)
 let colorBlanco = styles.getPropertyValue("--color-blanco")
 let colorPrincipal = styles.getPropertyValue("--color-principal")
 let verdeOscuro = styles.getPropertyValue("--verde-oscuro")
+
+let tituloPrincipal = document.querySelector("h1")
+let labels = document.querySelectorAll("label")
+let textosGenerales = document.querySelectorAll("p")
 
 let year = document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -11,17 +16,50 @@ function modoOscuro() {
     funcionTema = !funcionTema;
     if (funcionTema === false) {
         document.body.style.backgroundColor = verdeOscuro;
-        document.body.style.color = colorBlanco;
+        tituloPrincipal.style.color = colorBlanco;
+        labels.forEach(label => {label.style.color = colorBlanco});
+        textosGenerales.forEach(textosGenerales => {textosGenerales.style.color = colorBlanco});
         btnModo.textContent = "Tema Claro"
     }
     else {
         document.body.style.backgroundColor = ""
+        tituloPrincipal.style.color = "";
+        labels.forEach(label => {label.style.color = ""});
+        textosGenerales.forEach(textosGenerales => {textosGenerales.style.color = ""});
         btnModo.textContent = "Tema Oscuro"
-        document.body.style.color = colorPrincipal;
     }
 }
 btnModo.addEventListener("click", modoOscuro)
-// Código de la web
+
+//JS de Iyana
+let total = document.getElementById("total");
+let ruta = document.getElementById("ruta");
+let personas = document.getElementById("personas");
+
+let precioTotal = 0;
+
+
+function actualizarPrecio(rutaEscogida) {
+
+    let elementoRutaEscogida = document.getElementById(rutaEscogida);
+
+    let precioActividad = parseInt(elementoRutaEscogida.querySelector(".precio").textContent);
+
+    precioTotal = personas.value * precioActividad;
+
+    total.textContent = `Total: ${precioTotal} €`;
+};
+
+ruta.addEventListener("change", function () {
+    console.log(ruta.value);
+    actualizarPrecio(ruta.value);
+});
+
+personas.addEventListener("change", function () {
+    actualizarPrecio(ruta.value)
+});
+
+actualizarPrecio(ruta.value);
 
 //                  scrip para el apartado de materiales
 //============================================================================
@@ -87,3 +125,5 @@ function contar() {
 
 lista.addEventListener("change", dificultad);
 resultado.addEventListener("click", contar);
+
+
