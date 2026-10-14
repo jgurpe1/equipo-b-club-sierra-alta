@@ -1,7 +1,8 @@
 :root {
     --color-principal: rgb(51, 99, 62);
-    --color-blanco: rgb(250, 250, 250);
+    --color-blanco: rgb(244, 247, 242);
     --verde-oscuro: rgb(14, 31, 24);
+    --naranja: rgb(218, 127, 24);
 }
 
 body {
@@ -10,20 +11,90 @@ body {
     margin: 0;
     background-color: var(--color-blanco)
 }
+
 .container {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
+    margin-top: 2.5em;
     margin-bottom: 2em;
+}
+
+/*Uso grip para poner las sendas  en */
+.todo {
+    margin: 1em 0;
+    width: 230px;
+    display: grid;
+    justify-items: left;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.pares {
+    display: contents;
+    margin-bottom: 25px;
+}
+
+/* relativo a div sendas */
+h3 {
+    color: var(--verde-oscuro);
+    font-weight: bolder;
+    margin: 0em;
+    font-size: 1.1em;
+}
+
+h4 {
+    color: var(--verde-oscuro);
+    margin: 0;
+}
+
+.senda {
+    display: inline-block;
+    border: 0.5px solid rgb(204, 218, 209);
+    border-radius: 10px;
+    width: 230px;
+    padding: 0.8em 1em;
+    background-color: white;
+}
+
+.verde {
+    border-left: 8px solid rgb(52, 148, 84);
+}
+
+.rojo {
+    border-left: 8px solid rgb(187, 44, 44);
+    ;
+}
+
+.amarilla {
+    border-left: 8px solid rgb(219, 177, 70);
+}
+
+.corazon {
+    display: inline-block;
+    border: 1px solid rgb(188, 207, 190);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    color: rgb(170, 23, 23);
+    font-size: 18px;
+    margin-top: 0.2em;
+    padding-top: 0.3em;
+}
+
+.corazon:hover {
+    cursor: pointer;
 }
 
 nav {
     background-color: var(--color-principal);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 1.7em;
+    padding: 0.9em 1.7em;
 }
 
 a {
@@ -38,6 +109,7 @@ a {
 #btnModo {
     padding: 0.3em 1em;
 }
+
 #btnModo:hover {
     cursor: pointer;
 }
@@ -46,6 +118,7 @@ a {
     display: flex;
     gap: 1em;
 }
+
 #paginaActual {
     text-decoration: underline;
     text-decoration-thickness: 2px;
@@ -64,6 +137,7 @@ footer {
     align-items: center;
     bottom: 0;
 }
+
 #textoFooter {
     margin-bottom: 0;
     margin-top: 1em;
@@ -74,8 +148,9 @@ footer {
 /*de la página de "ÚNETE"*/
 
 #total {
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: bold;
+    margin-top: 1em;
 }
 
 #btnApuntarme {
@@ -84,6 +159,11 @@ footer {
     color: var(--color-blanco);
     padding: 0.5em 1em;
     border-radius: 6px;
+    margin-top: 1.3em;
+}
+
+#btnApuntarme:hover {
+    cursor: pointer;
 }
 
 /*Esto afecta también a la página "MATERIALES"*/
@@ -93,9 +173,79 @@ label {
 
 p {
     color: var(--verde-oscuro);
+    margin: 0.2em 0;
 }
 
-select, input {
+input {
     padding: 0.5em 1em;
     font-size: 1em;
+    margin: 0.5em 0;
+    min-width: 350px;
+}
+
+select {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    margin: 0.5em 0;
+    min-width: 386px;
+}
+#plazas {
+    margin-bottom: 0.5em;
+}
+
+/*Estilos de INDEX*/
+
+#proxima-salida {
+    text-align: center;
+    border: 1px solid var(--color-principal);
+    border-radius: 20px;
+    font-weight: bold;
+    max-width: 450px;
+    padding: 0.3em 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2.4em;
+}
+
+#cifras-club {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8em;
+}
+
+.cifra-dato {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 30%;
+    padding: 0.3em;
+    margin: 0;
+    border: 1px solid rgb(188, 207, 190);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.numero {
+    font-size: 1.8em;
+    color: var(--naranja);
+    font-weight: bold;
+}
+
+@media screen and (max-width:600px) {
+    .container {
+        margin: 3em;
+    }
+
+    #cifras-club {
+        flex-direction: column;
+    }
+
+    .todo {
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -16,7 +16,7 @@
         <a href="index.html"><b>Club Sierra Alta</b></a>
       </div>
       <div>
-        <button id="btnModo">Tema Oscuro</button>
+        <button id="btnModo">Tema oscuro</button>
       </div>
       <div id="navegacionDerecha">
         <a href="index.html">Inicio</a>
@@ -30,14 +30,14 @@
     <main class="container">
         <h1>Únete a una salida</h1>
         <form id="formulario" novalidate>
-            <label for="nombre">Nombre</label>
-            <input id="nombre" type="text">
+            <label for="nombre">Nombre</label><br>
+            <input id="nombre" type="text"><br>
             <span class="error" id="e-nombre"></span>
-            <label for="email">Correo electrónico</label>
+            <label for="email">Correo electrónico</label><br>
             <input id="email" type="email">
-            <span class="error" id="e-email"></span>
+            <span class="error" id="e-email"></span><br>
 
-            <label for="ruta">Ruta</label>
+            <label for="ruta">Ruta</label><br>
             <select id="ruta">
                 <option id="senda-rio" value="senda-rio" selected>Senda del río (<span class="precio">5</span>€)</option>
                 <option id="collado" value="collado">Collado del lobo (<span class="precio">8</span>€)</option>
@@ -48,7 +48,7 @@
             </select>
             <p id="plazas">Plazas disponibles: 0</p>
 
-            <label for="personas">Número de personas</label>
+            <label for="personas">Número de personas</label><br>
             <input id="personas" type="number" min="1" max="6" value="1">
             <span class="error" id="e-personas"></span>
 
@@ -63,6 +63,7 @@
     </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/claroOscuro.js"></script>
 </body>
 
 </html>
