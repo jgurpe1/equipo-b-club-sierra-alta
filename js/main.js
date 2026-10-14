@@ -1,9 +1,14 @@
 let btnModo = document.getElementById ("btnModo")
 let funcionTema = true
+
 let styles = getComputedStyle(document.documentElement)
 let colorBlanco = styles.getPropertyValue("--color-blanco")
 let colorPrincipal = styles.getPropertyValue("--color-principal")
 let verdeOscuro = styles.getPropertyValue("--verde-oscuro")
+
+let tituloPrincipal = document.querySelector("h1")
+let labels = document.querySelectorAll("label")
+let textosGenerales = document.querySelectorAll("p")
 
 let year = document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -11,13 +16,17 @@ function modoOscuro() {
     funcionTema = !funcionTema;
     if (funcionTema === false) {
         document.body.style.backgroundColor = verdeOscuro;
-        document.body.style.color = colorBlanco;
+        tituloPrincipal.style.color = colorBlanco;
+        labels.forEach(label => {label.style.color = colorBlanco});
+        textosGenerales.forEach(textosGenerales => {textosGenerales.style.color = colorBlanco});
         btnModo.textContent = "Tema Claro"
     }
     else {
         document.body.style.backgroundColor = ""
+        tituloPrincipal.style.color = "";
+        labels.forEach(label => {label.style.color = ""});
+        textosGenerales.forEach(textosGenerales => {textosGenerales.style.color = ""});
         btnModo.textContent = "Tema Oscuro"
-        document.body.style.color = colorPrincipal;
     }
 }
 btnModo.addEventListener("click", modoOscuro)
@@ -96,7 +105,7 @@ btnApuntarme.addEventListener("click", function (e) {
     mensajeError()
 });
 
-//                  scrip para el apartado de materiales
+//                  script para el apartado de materiales
 //============================================================================
 
 let lista = document.getElementById("list");
@@ -159,6 +168,3 @@ function contar() {
 }
 
 lista.addEventListener("change", dificultad);
-resultado.addEventListener("click", contar);
-
-
