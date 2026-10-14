@@ -1,0 +1,116 @@
+
+/*Limpieza de body*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f2f5f2;
+}
+
+.ruta {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 12px; 
+}
+ h1  {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 46px;
+    font-weight: bold;
+}
+h2 {
+    font-size: 18px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding-right: 1px;
+    margin-top: 10px;
+}
+
+/*Uso grip para poner las sendas  en */
+.todo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+.pares {
+    display: contents;
+    margin-bottom: 25px;
+}
+
+/* uso de flex para poner h2 y select en linea*/
+.rutas {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    align-items: left;
+    gap: 15px;
+}
+#level {
+    width: 100px;
+    height: 40px;
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.favoritos {
+    text-align: left;
+    margin-bottom: 10px;
+} 
+
+/* relativo a div sendas */
+.senda {
+    display: inline-block;
+    border: 0.5px solid rgb(204, 218, 209);
+    border-radius: 10px;
+    margin-right: 10px;
+    width: 300px;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+.verde {
+    border-left: 8px solid forestgreen;
+}
+.rojo {
+    border-left: 8px solid red;
+}
+.amarilla {
+    border-left: 8px solid goldenrod;
+}
+p {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    margin: 0px;
+}
+h4 {
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0px;
+    margin-bottom: 5px;
+    font-family:  Helvetica, sans-serif
+}
+
+.corazon {
+    display: inline-block;
+    border: 1px solid rgb(188, 207, 190);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: red;
+    font-size: 22px;
+
+}
