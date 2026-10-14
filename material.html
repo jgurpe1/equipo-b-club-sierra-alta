@@ -1,25 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Material</title>
-    <link rel="stylesheet" href="./equipo-b-club-sierra-alta-main/css/estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material · Club Sierra Alta</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body id="materiales">
-    <h1 id="materialSalida">Material para la salida</h1>
-   
-    <label for="list" id="dificultadRuta">Dificultad de la ruta</label>
+    <header>
+        <nav id="nav">
+            <div id="tituloLink">
+                <a href="index.html"><b>Club Sierra Alta</b></a>
+            </div>
+            <div>
+                <button id="btnModo">Tema Oscuro</button>
+            </div>
+            <div id="navegacionDerecha">
+                <a href="index.html">Inicio</a>
+                <a href="rutas.html">Rutas</a>
+                <a href="unete.html">Únete</a>
+                <a href="material.html" id="paginaActual">Material</a>
+            </div>
+        </nav>
+    </header>
 
-    <select name="list" id="list">
-        <option value="select">Elige una Dificultad</option>
-        <option value="facil">Fácil</option>
-        <option value="media">Media</option>
-        <option value="dificil">Difícil</option>
-    </select>
-    <div id="listaMaterial"></div>
-    <p id="resultado"></p>
+    <div class="container">
+        <h1 id="materialSalida">Material para la salida</h1>
 
-    <script src="./equipo-b-club-sierra-alta-main/js/main.js"></script>
+        <label for="list" id="dificultadRuta">Dificultad de la ruta</label>
+
+        <select name="list" id="list">
+            <option value="select">Elige una Dificultad</option>
+            <option value="facil">Fácil</option>
+            <option value="media">Media</option>
+            <option value="dificil">Difícil</option>
+        </select>
+        <div id="listaMaterial"></div>
+        <p id="resultado"></p>
+    </div>
+
+    <footer>
+        <p id="textoFooter">© <span id="year">0</span> Club Sierra Alta</p>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
