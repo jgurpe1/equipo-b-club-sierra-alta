@@ -69,12 +69,25 @@ function validarEmail(email) {
 
 btnApuntarme.addEventListener("click", function (e) {
     event.preventDefault();
-    mensajeError()
+    //sandra codigo para cuando el cliente escriba la cantidad de asiento mayor al de asientos disponibles
+    if (Number(personas.value) > disponibles){
+        errorPersonas.textContent = `Solo quedan ${disponibles} plazas disponibles`;
+        return;
+    }
+
+    errorPersonas.textContent = "";
+    mensajeError();
+    
+    //(sandra) adding code for the actualization of the seats available 
+    if (exito.textContent !== ""){
+        actualizandoPlazasDispo();
+    }
 });
 
 
 // adding code for the quantity of plazas available when the user select the route
 let plazas = document.getElementById("plazas");
+let disponibles;
 
 const PLAZAS = {
         "senda-rio": 12,
@@ -83,17 +96,37 @@ const PLAZAS = {
         "hayedo": 14, 
         "cresta-aguilas": 8,
         "valle": 10 
-        
     };
-    
+
     function plazasDisponibles (){
-        let disponibles = PLAZAS[ruta.value];
+        disponibles = PLAZAS[ruta.value];
 
-        plazas.textContent = `Plazas disponibles: ${disponibles}`;
+        if(disponibles === 0){
+            plazas.textContent = "Ruta completa";
+            btnApuntarme.disabled = true;
+            personas.disabled = true;
+        }else{
+            plazas.textContent = `Plazas disponibles: ${disponibles}`;
+            btnApuntarme.disabled = false;
+            personas.disabled = false;
+        }
+
+        // plazas.textContent = `Plazas disponibles: ${disponibles}`;
         personas.max = Math.min(6, disponibles);
-
+        // btnApuntarme.disabled = disponibles === 0;
     }
     
     ruta.addEventListener("change", plazasDisponibles);
     plazasDisponibles();
     
+//code updating the avaialable seats when the user already select the route
+
+function actualizandoPlazasDispo (){
+    PLAZAS[ruta.value] -= Number(personas.value);
+    plazasDisponibles();
+
+    personas.value = 1;
+    actualizarPrecio(ruta.value);
+}
+
+//ruta.addEventListener("change", actualizandoPlazasDispo);
