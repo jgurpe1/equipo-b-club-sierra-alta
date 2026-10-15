@@ -16,7 +16,7 @@ fetch("rutas.html")
         diasProximaSalida.textContent = diasQueFaltan;
 
         let nombreProximaSalidaIndex = document.getElementById("nombre-proxima-salida");
-        let nombreProximaSalidaRutas = pagina.querySelector(".senda h4").textContent;
+        let nombreProximaSalidaRutas = pagina.querySelector(".senda h3").textContent;
 
         nombreProximaSalidaIndex.textContent = nombreProximaSalidaRutas;
     });
