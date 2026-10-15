@@ -16,35 +16,6 @@ let labels = document.querySelectorAll("label")
 let textosGenerales = document.querySelectorAll("p")
 let colorFavoritos = document.querySelector(".favoritos");
 
-let year = document.getElementById("year").textContent = new Date().getFullYear();
-
-function modoOscuro() {
-    funcionTema = !funcionTema;
-    if (funcionTema === false) {
-        document.body.style.backgroundColor = verdeOscuro;
-        tituloPrincipal.style.color = colorBlanco;
-        tituloSecundario.style.color = colorBlanco;
-        colorFavoritos.style.color = colorBlanco;
-        labels.forEach(label => {label.style.color = colorBlanco});
-        textosGenerales.forEach(textosGenerales => {textosGenerales.style.color = colorNegro});
-        btnModo.textContent = "Tema Claro";
-
-    }
-    else {
-        document.body.style.backgroundColor = ""
-        tituloPrincipal.style.color = "";
-        labels.forEach(label => {label.style.color = ""});
-        textosGenerales.forEach(textosGenerales => {textosGenerales.style.color = ""});
-        btnModo.textContent = "Tema Oscuro"
-        tituloPrincipal.style.color= "";
-        tituloSecundario.style.color = "";
-          colorFavoritos.style.color = "";
-    }
-}
-btnModo.addEventListener("click", modoOscuro)
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////***** JS RUBEN ******//////////////////////////////////////////////////////////////////////
 
