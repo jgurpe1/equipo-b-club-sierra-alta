@@ -42,6 +42,9 @@ function mensajeError() {
     errorNombre.textContent = ``;
     errorMail.textContent = ``;
     exito.textContent = ``;
+    exito.style.fontWeight = "bold"
+    errorMail.style.color = "rgb(170, 23, 23)"
+    errorNombre.style.color = "rgb(170, 23, 23)"
 
     if (nombre.value === "" && email.value === "") {
         errorNombre.textContent = `Escribe tu nombre.`;
