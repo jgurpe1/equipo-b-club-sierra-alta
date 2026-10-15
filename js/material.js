@@ -54,7 +54,7 @@
         let marcados = listaMaterial.querySelectorAll("input:checked").length;
         let totalMateriales = materiales[lista.value].length;
 
-        resultado.textContent = `Estás equipado con ${marcados} de ${totalMateriales}`;
+        resultado.textContent = `Llevas ${marcados} de ${totalMateriales}`;
     }
 
     if (lista && listaMaterial && resultado) {
