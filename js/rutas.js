@@ -1,20 +1,5 @@
 //JS de la página Rutas
-///////////////////////////////////////////////////////////////////////////////
-//////////// ****JD CARMEN **** ///////////////////////////////////////////////
-let btnModo = document.getElementById ("btnModo")
-let funcionTema = true
 
-let styles = getComputedStyle(document.documentElement)
-let colorBlanco = styles.getPropertyValue("--color-blanco")
-let colorPrincipal = styles.getPropertyValue("--color-principal")
-let verdeOscuro = styles.getPropertyValue("--verde-oscuro")
-let colorNegro = styles.getPropertyValue("--color-negro")
-
-let tituloPrincipal = document.querySelector("h1")
-let tituloSecundario = document.querySelector("h2")
-let labels = document.querySelectorAll("label")
-let textosGenerales = document.querySelectorAll("p")
-let colorFavoritos = document.querySelector(".favoritos");
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////***** JS RUBEN ******//////////////////////////////////////////////////////////////////////
