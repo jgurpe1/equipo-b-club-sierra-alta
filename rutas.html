@@ -1,15 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rutas · Club Sierra Alta</title>
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/rutas.css">
 </head>
-<body>
 
-  <!-- Aquí va la página -->
+<body class="caja">
+  <header>
+    <nav id="nav">
+      <div id="tituloLink">
+        <a href="index.html"><b>Club Sierra Alta</b></a>
+      </div>
+      <div>
+        <button id="btnModo">Tema oscuro</button>
+      </div>
+      <div id="navegacionDerecha">
+        <a href="index.html">Inicio</a>
+        <a href="rutas.html" id="paginaActual">Rutas</a>
+        <a href="unete.html">Únete</a>
+        <a href="material.html">Material</a>
+      </div>
+    </nav>
+  </header>
 
-  <script src="js/main.js"></script>
+  <section class="container">
+    <h1>Nuestras rutas</h1>
+    <div class="rutas">
+      <label for="level">Dificultad</label>
+      <select id="level">
+        <option value="todas" class="nivel todas">Todas</option>
+        <option value="facil" class="nivel facil">Fácil</option>
+        <option value="media" class="nivel media">Media</option>
+        <option value="dificil" class="nivel dificil">Difícil</option>
+      </select>
+    </div><br>
+
+    <h4 class="favoritos">Favoritos: 0 </h4>
+
+    <div class="todo">
+      <div class="pares">
+        <div class="senda verde facil">
+          <h3>Senda del río</h3>
+          <p class="textoSenda">6 km · fácil</p>
+          <p class="textoSenda">Salida: <span class="fecha">2026-11-08</span> · 5 €</p>
+          <span class="corazon">♡</span>
+        </div>
+        <div class="senda amarilla media">
+          <h3>Collado del lobo</h3>
+          <p class="textoSenda">12 km · media</p>
+          <p class="textoSenda">Salida: 2026-11-22 · 8 €</p>
+          <span class="corazon">♡</span>
+        </div>
+      </div>
+      <div class="pares">
+        <div class="senda rojo dificil">
+          <h3>Pico Alto</h3>
+          <p class="textoSenda">18 km · difícil</p>
+          <p class="textoSenda">Salida: 2026-12-06 · 12 €</p>
+          <span class="corazon">♡</span>
+        </div>
+        <div class="senda verde facil ">
+          <h3>Hayedo de otoño</h3>
+          <p class="textoSenda">9 km · fácil</p>
+          <p class="textoSenda">Salida: 2026-12-13 · 6 €</p>
+          <span class="corazon">♡</span>
+        </div>
+      </div>
+      <div class="pares">
+        <div class="senda rojo dificil">
+          <h3>Cresta de las Águilas</h3>
+          <p class="textoSenda">15 km · difícil</p>
+          <p class="textoSenda">Salida: 2026-01-17 · 12 €</p>
+          <span class="corazon">♡</span>
+        </div>
+        <div class="senda amarilla media">
+          <h3>Valle de las fuentes</h3>
+          <p class="textoSenda">11 km · media</p>
+          <p class="textoSenda">Salida: 2027-01-31 · 8 €</p>
+          <span class="corazon">♡</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <footer>
+    <p id="textoFooter">© <span id="year">0</span> Club Sierra Alta</p>
+  </footer>
+
+  <script src="js/rutas.js"></script>
+  <script src="js/claroOscuro.js"></script>
 </body>
+
 </html>
